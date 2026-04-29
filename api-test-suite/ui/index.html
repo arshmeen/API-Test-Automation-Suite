@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scout HQ - API Test Suite UI</title>
+  <link rel="stylesheet" href="./theme.css" />
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="hero">
+    <p class="tag">Recon Unit Dashboard</p>
+    <h1>API Test Automation Suite</h1>
+    <p class="subtitle">Attack-on-Titan inspired control center for visualizing test health and endpoint coverage.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#results">View Test Status</a>
+      <a class="btn btn-secondary" href="#coverage">Endpoint Coverage</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel stats" id="results">
+      <h2>Wall Integrity Metrics</h2>
+      <div class="stat-grid">
+        <article class="stat-card passed">
+          <p class="label">Passed</p>
+          <p class="value">08</p>
+        </article>
+        <article class="stat-card warning">
+          <p class="label">Flaky</p>
+          <p class="value">01</p>
+        </article>
+        <article class="stat-card failed">
+          <p class="label">Failed</p>
+          <p class="value">00</p>
+        </article>
+        <article class="stat-card neutral">
+          <p class="label">Execution Time</p>
+          <p class="value">12.4s</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Recent Operations</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="dot"></span>
+          <div>
+            <h3>Users endpoint validation</h3>
+            <p>Schema and status checks are stable across all sampled responses.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="dot"></span>
+          <div>
+            <h3>Negative test campaign</h3>
+            <p>Payloads with missing/invalid fields are correctly tracked for expected behavior.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <span class="dot"></span>
+          <div>
+            <h3>Scout report generated</h3>
+            <p>Run pytest with HTML output and this visual shell for stakeholder demo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" id="coverage">
+      <h2>Endpoint Coverage Map</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Endpoint</th>
+            <th>Method</th>
+            <th>Checks</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>/users</td>
+            <td>GET</td>
+            <td>Status + schema validation</td>
+            <td><span class="badge success">Secured</span></td>
+          </tr>
+          <tr>
+            <td>/posts</td>
+            <td>POST</td>
+            <td>Negative payload scenarios</td>
+            <td><span class="badge alert">Under Watch</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>Theme inspiration: humanity's final stand aesthetic (original franchise assets not included).</p>
+  </footer>
+</body>
+</html>
