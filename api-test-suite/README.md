@@ -106,3 +106,4 @@ Schema validation is used to simulate strict API contracts
 👨‍💻 Author
 
 Built as a portfolio project to demonstrate API testing and automation skills.
+![Tests](https://github.com/arshmeen/api-test-automation-framework/actions/workflows/tests.yml/badge.svg)
