@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: api-test-suite
+    name: api-test-automation-suite
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "python -m pytest"
+    startCommand: "python run_tests.py"
