@@ -1,24 +1,14 @@
 from utils.api_client import APIClient
+from utils.schemas import USER_SCHEMA
+from jsonschema import validate
 
-def test_get_posts():
-    response = APIClient.get("/posts")
+def test_get_users():
+    response = APIClient.get("/users")
 
     assert response.status_code == 200
-    assert isinstance(response.json(), list)
 
+    users = response.json()
+    assert isinstance(users, list)
 
-def test_create_post():
-    payload = {
-        "title": "test",
-        "body": "data",
-        "userId": 1
-    }
-
-    response = APIClient.post("/posts", payload)
-
-    assert response.status_code == 201
-    json_data = response.json()
-
-    assert json_data["title"] == payload["title"]
-    assert json_data["body"] == payload["body"]
-    assert json_data["userId"] == payload["userId"]
+    for user in users:
+        validate(instance=user, schema=USER_SCHEMA)

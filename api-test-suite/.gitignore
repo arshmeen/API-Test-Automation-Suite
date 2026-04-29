@@ -3,3 +3,4 @@ __pycache__/
 .env
 report.html
 .venv/
+.pytest_cache/
