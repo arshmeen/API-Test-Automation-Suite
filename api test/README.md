@@ -75,6 +75,18 @@ Open in browser to showcase a styled testing dashboard.
 
 Note: Theme is inspired by dark tactical visuals and does not use copyrighted assets.
 
+### Run dashboard with Flask (optional)
+
+Install dependencies, generate the report, then start the app from the project folder:
+
+```bash
+pip install -r requirements.txt
+pytest
+python app.py
+```
+
+Open **http://127.0.0.1:5000/** for the UI and **http://127.0.0.1:5000/report.html** for the themed pytest report (after `pytest` has run).
+
 🔍 Test Coverage
 ✔ Positive Tests
 Validate successful API responses
