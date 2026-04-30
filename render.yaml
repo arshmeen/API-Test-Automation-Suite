@@ -3,4 +3,4 @@ services:
     name: api-test-automation-suite
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "python run_tests.py"
+    startCommand: "python app.py"
